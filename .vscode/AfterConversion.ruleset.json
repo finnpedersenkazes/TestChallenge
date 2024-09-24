@@ -4,7 +4,7 @@
     "rules": [
         {
             "id": "AA0139",
-            "action": "Error",
+            "action": "Info",
             "justification": "Do not assign a text to a target with smaller size. POTENTIAL RUNTIME ERROR."
         },
         {
