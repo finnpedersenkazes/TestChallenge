@@ -3,11 +3,7 @@ codeunit 60127 "Test Challenge 02"
     Subtype = Test;
 
     var
-        Solutions: Codeunit "Solutions";
-
-    trigger OnRun()
-    begin
-    end;
+        Solutions: Codeunit Solutions;
 
     procedure hex2int(hex: Code[16]) int: BigInteger
     begin
@@ -36,8 +32,8 @@ codeunit 60127 "Test Challenge 02"
     [Test]
     procedure TestSimpleInt2Hex01()
     var
-        int: Integer;
         hex: Code[20];
+        int: Integer;
     begin
         int := 15;
         hex := 'F';
@@ -48,8 +44,8 @@ codeunit 60127 "Test Challenge 02"
     [Test]
     procedure TestSimpleInt2Hex02()
     var
-        int: Integer;
         hex: Code[20];
+        int: Integer;
     begin
         int := 255;
         hex := 'FF';
@@ -60,8 +56,8 @@ codeunit 60127 "Test Challenge 02"
     [Test]
     procedure TestSimpleHex2Int03()
     var
-        int: Integer;
         hex: Code[16];
+        int: Integer;
     begin
         int := 15;
         hex := 'F';
@@ -72,8 +68,8 @@ codeunit 60127 "Test Challenge 02"
     [Test]
     procedure TestSimpleHex2Int04()
     var
-        int: Integer;
         hex: Code[16];
+        int: Integer;
     begin
         int := 255;
         hex := 'FF';
@@ -84,9 +80,9 @@ codeunit 60127 "Test Challenge 02"
     [Test]
     procedure TestRandomDouble05()
     var
-        int: Integer;
         expectedInt: Integer;
         i: Integer;
+        int: Integer;
     begin
         for i := 1 to 100000 do begin
             int := Random(999999999);
@@ -99,10 +95,10 @@ codeunit 60127 "Test Challenge 02"
     [Test]
     procedure TestRandomTrible06()
     var
-        int: Integer;
-        hex: Code[16];
         expectedHex: Code[16];
+        hex: Code[16];
         i: Integer;
+        int: Integer;
     begin
         for i := 1 to 100000 do begin
             int := Random(999999999);
@@ -117,8 +113,8 @@ codeunit 60127 "Test Challenge 02"
     procedure Test15hexdigits07()
     var
         int: BigInteger;
-        hex: Code[16];
         expectedHex: Code[16];
+        hex: Code[16];
         i: Integer;
         j: Integer;
     begin
@@ -138,8 +134,8 @@ codeunit 60127 "Test Challenge 02"
     procedure TestMaxBigInteger08()
     var
         int: BigInteger;
-        hex: Code[16];
         expectedHex: Code[16];
+        hex: Code[16];
     begin
         int := 9223372036854775807L;
         hex := int2hex(int);
@@ -152,8 +148,8 @@ codeunit 60127 "Test Challenge 02"
     procedure TestNegativeNumber2Hex09()
     var
         int: BigInteger;
-        hex: Code[20];
         expectedHex: Code[20];
+        hex: Code[20];
     begin
         int := -1;
         hex := int2hex(int);
@@ -187,8 +183,8 @@ codeunit 60127 "Test Challenge 02"
     [Test]
     procedure TestSTXkey2Property()
     var
-        int: BigInteger;
         expectedInt: BigInteger;
+        int: BigInteger;
     begin
         // This is a line from the fin.stx file.
         // 00033-00181-030-0: CaptionML
@@ -207,4 +203,3 @@ codeunit 60127 "Test Challenge 02"
             Error('I expeced to get %1 when converting 00033-00181. I got %2', expectedInt, int);
     end;
 }
-

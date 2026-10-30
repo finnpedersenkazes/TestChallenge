@@ -1,12 +1,33 @@
 {
+    "alcops.automaticUpdates": true,
+    "alcops.updateNotification": "auto-install",
+    "alcops.versionChannel": "stable",
+    "alcops.checkUpdateInterval": 24,
     "al.enableCodeAnalysis": true,
     "al.codeAnalyzers": [
         "${CodeCop}",
         "${UICop}",
-        "${PerTenantExtensionCop}"
+        "${PerTenantExtensionCop}",
+        "${analyzerFolder}ALCops.ApplicationCop.dll",
+        "${analyzerFolder}ALCops.DocumentationCop.dll",
+        "${analyzerFolder}ALCops.FormattingCop.dll",
+        "${analyzerFolder}ALCops.LinterCop.dll",
+        "${analyzerFolder}ALCops.PlatformCop.dll",
+        "${analyzerFolder}ALCops.TestAutomationCop.dll",
+        "${analyzerFolder}ALCops.Common.dll",
     ],
+    // Editor settings for better AI integration
+    "editor.inlineSuggest.enabled": true,
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": true,
+        "strings": true
+    },
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.al": "explicit"
+    },
     "al.backgroundCodeAnalysis": "Project",
-    "al.defaultLaunchConfigurationName": "Docker",
     "al.browser": "Edge",
     "al.ruleSetPath": "./.vscode/AfterConversion.ruleset.json",
     "xml.validation.namespaces.enabled": "onNamespaceEncountered",
@@ -17,6 +38,19 @@
     "CRS.ExtensionObjectNamePattern": "",
     "CRS.AlSubFolderName": "None",
     "CRS.OnSaveAlFileAction": "Rename",
+    "CRS.NamespacePrefixToIgnore": "FinnPedersenFrance.TestChallenge",
+    "CRS.ReorganizeByNamespace": true,
+    "alOutline.codeActionsOnSave": [
+        "SortCustomizations",
+        "SortPermissions",
+        "SortProperties",
+        "SortReportColumns",
+        "SortTableFields",
+        "SortVariables",
+        "SortUsings",
+        "SortTriggers",
+        "OneStatementPerLine"
+    ],
     "alOutline.codeCleanupActions": [
         "AddApplicationAreas",
         "AddEnumValuesCaptions",
@@ -42,6 +76,7 @@
         "RemoveStrSubstNoFromError",
         "RemoveUnusedVariables",
         "RemoveWithStatements",
+        "RemoveUnusedUsings",
         "SortCustomizations",
         "SortPermissionSetList",
         "SortPermissions",
@@ -49,6 +84,7 @@
         "SortReportColumns",
         "SortTableFields",
         "SortVariables",
+        "SortUsings",
         "TrimTrailingWhitespace"
     ],
     "alOutline.defaultAddPageFieldCaptionsSettings": {},
@@ -74,13 +110,37 @@
         "statusBar.background": "#ff3d00",
         "statusBar.foreground": "#e7e7e7",
         "statusBarItem.hoverBackground": "#ff6433",
-        "statusBarItem.remoteBackground": "#ff3d00",
+        "statusBarItem.remoteBackground": "#006017",
         "statusBarItem.remoteForeground": "#e7e7e7",
         "titleBar.activeBackground": "#ff3d00",
         "titleBar.activeForeground": "#e7e7e7",
         "titleBar.inactiveBackground": "#ff3d0099",
-        "titleBar.inactiveForeground": "#e7e7e799"
+        "titleBar.inactiveForeground": "#e7e7e799",
+        "activityBar.activeBorder": "#15202b",
+        "activityBarTop.activeBackground": "#ff6433",
+        "activityBarTop.activeBorder": "#15202b",
+        "activityBarTop.background": "#ff6433",
+        "activityBarTop.foreground": "#15202b",
+        "activityBarTop.inactiveForeground": "#15202b99",
+        "commandCenter.foreground": "#e7e7e7",
+        "statusBar.debuggingBackground": "#ff3d00",
+        "statusBar.debuggingForeground": "#e7e7e7",
+        "statusBar.inactiveBackground": "#ff3d00"
     },
     "peacock.color": "#ff3d00",
-    "linterCop.autoDownload": true
+    "ATS.RootNamespace": "FinnPedersenFrance.ApiCore",
+    "ATS.UseObjectFilePathAsNamespace": true,
+    "ATS.EnableNamespaceDiagnostics": true,
+    "ATS.NamespaceMandatory": true,
+    "ATS.RegionInfoOnStatusBar": "Show on Left",
+    "todo-tree.general.tags": [
+        "BUG",
+        "HACK",
+        "FIXME",
+        "TODO",
+        "[ ]",
+        "[x]",
+        "XXX",
+        "NOTE"
+    ]
 }

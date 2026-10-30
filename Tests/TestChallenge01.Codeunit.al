@@ -3,11 +3,7 @@ codeunit 60126 "Test Challenge 01"
     Subtype = Test;
 
     var
-        Solutions: Codeunit "Solutions";
-
-    trigger OnRun()
-    begin
-    end;
+        Solutions: Codeunit Solutions;
 
     procedure AddComment(var Comment: Text[1024]; NewComment: Text[1024])
     begin
@@ -37,7 +33,7 @@ codeunit 60126 "Test Challenge 01"
     [TryFunction]
     procedure TryDMY2DATE(Day: Integer; Month: Integer; Year: Integer; var Date: Date)
     begin
-        Date := Dmy2date(Day, Month, Year);
+        Date := DMY2Date(Day, Month, Year);
     end;
 
     [Test]
@@ -54,8 +50,8 @@ codeunit 60126 "Test Challenge 01"
     [Test]
     procedure TestAddComment2()
     var
-        Text: Text[1024];
         OriginalText: Text[1024];
+        Text: Text[1024];
     begin
         Text := 'OK';
         OriginalText := Text;
@@ -78,8 +74,8 @@ codeunit 60126 "Test Challenge 01"
     [Test]
     procedure TestAddComment4()
     var
-        Text: Text[1024];
         OriginalText: Text[1024];
+        Text: Text[1024];
     begin
         Text := 'OK';
         OriginalText := Text;
@@ -91,8 +87,8 @@ codeunit 60126 "Test Challenge 01"
     [Test]
     procedure TestAddComment5()
     var
-        Text: Text[1024];
         OriginalText: Text[1024];
+        Text: Text[1024];
     begin
         Text := 'OK1;OK2;OK3;OK4';
         OriginalText := Text;
@@ -104,8 +100,8 @@ codeunit 60126 "Test Challenge 01"
     [Test]
     procedure TestAddComment6()
     var
-        Text: Text[1024];
         OriginalText: Text[1024];
+        Text: Text[1024];
     begin
         Text := PadStr('', MaxStrLen(Text), 'X');
         OriginalText := Text;
@@ -192,4 +188,3 @@ codeunit 60126 "Test Challenge 01"
             Error('Expected to fail evaluating 29/2/2019 to a date.');
     end;
 }
-

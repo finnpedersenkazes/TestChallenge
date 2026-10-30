@@ -5,10 +5,6 @@ codeunit 60128 "Test Challenge 03"
 
     Subtype = Test;
 
-    trigger OnRun()
-    begin
-    end;
-
     [Test]
     procedure TestNavisionPowerFunction1()
     var
@@ -47,4 +43,3 @@ codeunit 60128 "Test Challenge 03"
         // Remove the ASSERTERROR to see the error message.
     end;
 }
-

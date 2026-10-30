@@ -1,31 +1,20 @@
 {
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        // {
-        //     "name": "Microsoft cloud sandbox",
-        //     "request": "launch",
-        //     "type": "al",
-        //     "environmentType": "Sandbox",
-        //     "environmentName": "fpfrbcdev2",
-        //     "startupObjectId": 130401,
-        //     "startupObjectType": "Page",
-        //     "breakOnError": "All",
-        //     "launchBrowser": true,
-        //     "enableLongRunningSqlStatements": true,
-        //     "enableSqlInformationDebugger": true,
-        //     "schemaUpdateMode": "ForceSync"
-        // },
         {
             "name": "Docker",
             "type": "al",
             "request": "launch",
             "environmentType": "OnPrem",
-            "server": "http://GodikDocker",
+            "server": "http://NemBetalingLatest",
             "serverInstance": "BC",
             "authentication": "UserPassword",
             "startupObjectType": "Page",
-            "startupObjectId": 130451,
-            "breakOnError": "All",
+            "startupObjectId": 130451, // Account Receivables Role Center //50000 Setup, // 672 Job Queue, // 9022 Frontpage
+            "breakOnError": "ExcludeTry",
             "breakOnRecordWrite": "None",
             "launchBrowser": true,
             "enableSqlInformationDebugger": true,
@@ -33,7 +22,8 @@
             "longRunningSqlStatementsThreshold": 500,
             "numberOfSqlStatements": 10,
             "tenant": "default",
-            "usePublicURLFromServer": true
+            "usePublicURLFromServer": true,
+            "schemaUpdateMode": "ForceSync"
         }
     ]
 }

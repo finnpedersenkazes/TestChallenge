@@ -13,8 +13,8 @@
   "dependencies": [],
   "screenshots": [],
   "platform": "1.0.0.0",
-  "application": "23.0.0.0",
-  "runtime": "12.0",
+  "application": "28.0.0.0",
+  "runtime": "17.0",
   "idRanges": [
     {
       "from": 60125,
@@ -22,8 +22,6 @@
     }
   ],
   "features": [
-    "TranslationFile",
-    "GenerateCaptions",
     "NoImplicitWith"
   ],
   "resourceExposurePolicy": {
